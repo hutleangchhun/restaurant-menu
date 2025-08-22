@@ -2,10 +2,10 @@ import type { MenuCategory } from '@/types/menu';
 
 export const menuData: MenuCategory[] = [
   {
-    id: 'soup',
+    id: 'rice-noodle',
     name: {
-      en: 'Soup',
-      km: 'ប្រភេទស៊ុប'
+      en: 'Rice Noodle',
+      km: 'ប្រភេទគុយទាវ'
     },
     description: {
       en: 'Delicious homemade soup, fresh and flavorful!',
@@ -53,11 +53,7 @@ export const menuData: MenuCategory[] = [
               }
             ]
           }
-        ],
-        labels: [{
-          km: 'ស៊ុប',
-          en: 'Soup'
-        }]
+        ]
       },
       {
         id: 'rice-noodle-soup-beef',
@@ -100,11 +96,7 @@ export const menuData: MenuCategory[] = [
               }
             ]
           }
-        ],
-        labels: [{
-          km: 'ស៊ុប',
-          en: 'Soup'
-        }]
+        ]
       },
       {
         id: 'rice-noodle-soup-meatball',
@@ -113,7 +105,7 @@ export const menuData: MenuCategory[] = [
           km: 'គុយទាវប្រហិតត្រី'
         },
         description: {
-          en: 'Rich beef noodle soup with tender beef and sauce',
+          en: 'Rice Noodle soup with fish meatball and sauce',
           km: 'ស៊ុបគុយទាវជាមួយប្រហិតត្រី និងទឹកជ្រលក់'
         },
         price: 6000,
@@ -147,25 +139,185 @@ export const menuData: MenuCategory[] = [
               }
             ]
           }
-        ],
-        labels: [{
-          km: 'ស៊ុប',
-          en: 'Soup'
-        }]
+        ]
+      },
+      {
+        id: 'rice-noodle-stew',
+        name: {
+          en: 'Beef Stew with Rice Noodles',
+          km: 'គុយទាវខគោ'
+        },
+        description: {
+          en: 'Beef Stew with beef, vegetables, and rice noodles in a savory broth',
+          km: 'ខគោជាមួយសាច់គោ, បន្លែ, គុយទាវ'
+        },
+        price: 6000,
+        category: 'mains',
+        options: [
+          {
+            title: {
+              en: 'Add-ons',
+              km: 'បន្ថែម'
+            },
+            choices: [
+              {
+                name: { en: 'Extra Noodles', km: 'គុយទាវបន្ថែម' },
+                priceAdd: 1000
+              },
+              {
+                name: { en: 'Beef Meatballs', km: 'ប្រហិតសាច់គោ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Bread', km: 'នំប៉័ង' },
+                priceAdd: 1000
+              },
+            ]
+          }
+        ]
       },
     ]
   },
   {
-    id: 'beef-stew',
+    id: 'noodle',
     name: {
-      en: 'Beef Stew',
-      km: 'ខគោ'
+      en: 'Noodle',
+      km: 'ប្រភេទមី'
     },
     description: {
       en: 'Khmer-style braised beef, rich in flavor and perfect fresh bread or noodle!',
       km: 'ខគោខ្មែរ មានរសជាតិឆ្ញាញ់ ល្អបំផុតជាមួយនំប៉័ងក្តៅៗ ឬគុយទាវ និងមី!'
     },
     items: [
+      {
+        id: 'noodle-soup',
+        name: {
+          en: 'Noodle Soup with Pork',
+          km: 'មីស៊ុបសាច់ជ្រូក'
+        },
+        description: {
+          en: 'Noodle soup with pork, Innards, and sauce',
+          km: 'មីស៊ុបជាមួយសាច់ជ្រូក គ្រឿងក្នុង និងទឹកជ្រលក់'
+        },
+        price: 6000,
+        category: 'soup',
+        options: [
+          {
+            title: {
+              en: 'Add-ons',
+              km: 'បន្ថែម'
+            },
+            choices: [
+              {
+                name: { en: 'Pork Innards', km: 'គ្រឿងក្នុង' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Noodles', km: 'គុយទាវ' },
+                priceAdd: 1000
+              },
+              {
+                name: { en: 'Beef Meatballs', km: 'ប្រហិតសាច់គោ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Seafood', km: 'គ្រឿងសមុទ្រ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Fish Meatball', km: 'ប្រហិតត្រី' },
+                priceAdd: 2000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'noodle-soup-beef',
+        name: {
+          en: 'Noodle Soup with Beef',
+          km: 'មីស៊ុបសាច់គោ'
+        },
+        description: {
+          en: 'Rich beef noodle soup with tender beef and sauce',
+          km: 'មីស៊ុបជាមួយសាច់គោ និងទឹកជ្រលក់'
+        },
+        price: 6500,
+        category: 'soup',
+        options: [
+          {
+            title: {
+              en: 'Add-ons',
+              km: 'បន្ថែម'
+            },
+            choices: [
+              {
+                name: { en: 'Pork Innards', km: 'គ្រឿងក្នុង' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Extra Noodles', km: 'គុយទាវបន្ថែម' },
+                priceAdd: 1000
+              },
+              {
+                name: { en: 'Beef Meatballs', km: 'ប្រហិតសាច់គោ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Seafood', km: 'គ្រឿងសមុទ្រ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Fish Meatball', km: 'ប្រហិតត្រី' },
+                priceAdd: 2000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'noodle-soup-meatball',
+        name: {
+          en: 'Noodle Soup with fish Meatball',
+          km: 'មីស៊ុបប្រហិតត្រី'
+        },
+        description: {
+          en: 'Noodle soup with fish meatball and sauce',
+          km: 'មីស៊ុបជាមួយប្រហិតត្រី និងទឹកជ្រលក់'
+        },
+        price: 7000,
+        category: 'soup',
+        options: [
+          {
+            title: {
+              en: 'Add-ons',
+              km: 'បន្ថែម'
+            },
+            choices: [
+              {
+                name: { en: 'Pork Innards', km: 'គ្រឿងក្នុង' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Extra Noodles', km: 'គុយទាវបន្ថែម' },
+                priceAdd: 1000
+              },
+              {
+                name: { en: 'Beef Meatballs', km: 'ប្រហិតសាច់គោ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Seafood', km: 'គ្រឿងសមុទ្រ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Fish Meatball', km: 'ប្រហិតត្រី' },
+                priceAdd: 2000
+              }
+            ]
+          }
+        ]
+      },
       {
         id: 'noodle-stew',
         name: {
@@ -176,19 +328,30 @@ export const menuData: MenuCategory[] = [
           en: 'Beef Stew with beef, vegetables, and noodles in a savory broth',
           km: 'ខគោជាមួយសាច់គោ, បន្លែ, មី'
         },
-        price: 76000,
+        price: 7000,
         category: 'mains',
-         labels: [{
-          km: 'ខគោ',
-          en: 'Beef Stew'
-        }, {
-          km: 'បន្លែ',
-          en: 'Vegetables'
-        },
-        {
-          km: 'មី',
-          en: 'Noodles'
-        }]
+        options: [
+          {
+            title: {
+              en: 'Add-ons',
+              km: 'បន្ថែម'
+            },
+            choices: [
+              {
+                name: { en: 'Extra Noodles', km: 'គុយទាវបន្ថែម' },
+                priceAdd: 1000
+              },
+              {
+                name: { en: 'Beef Meatballs', km: 'ប្រហិតសាច់គោ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Bread', km: 'នំប៉័ង' },
+                priceAdd: 1000
+              },
+            ]
+          }
+        ]
       },
       {
         id: 'bread-stew',
@@ -197,7 +360,7 @@ export const menuData: MenuCategory[] = [
           km: 'នំប៉័ងខគោ'
         },
         description: {
-          en: 'Beef Stew with beef, vegetables, and fresh bread',
+          en: 'Beef Stew with vegetables, and fresh bread',
           km: 'ខគោជាមួយសាច់គោ, បន្លែ, នំប៉័ង'
         },
         price: 108000,
@@ -212,30 +375,6 @@ export const menuData: MenuCategory[] = [
         {
           km: 'នំប៉័ង',
           en: 'Bread'
-        }]
-      },
-      {
-        id: 'rice-noodle-stew',
-        name: {
-          en: 'Beef Stew with Rice Noodles',
-          km: 'គុយទាវខគោ'
-        },
-        description: {
-          en: 'Beef Stew with beef, vegetables, and rice noodles in a savory broth',
-          km: 'ខគោជាមួយសាច់គោ, បន្លែ, គុយទាវ'
-        },
-        price: 132000,
-        category: 'mains',
-        labels: [{
-          km: 'ខគោ',
-          en: 'Beef Stew'
-        }, {
-          km: 'បន្លែ',
-          en: 'Vegetables'
-        },
-        {
-          km: 'គុយទាវ',
-          en: 'Rice Noodles'
         }]
       },
     ]
