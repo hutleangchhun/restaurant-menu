@@ -1,6 +1,6 @@
 import { menuData } from '@/data/menuData';
 import { MenuCard } from './MenuCard';
-import { ChefHat, Clock, MapPin, Languages, Globe, Check } from 'lucide-react';
+import { ChefHat, Clock, MapPin, Languages, Globe, Check, ChevronDown } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
@@ -10,15 +10,17 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { useState } from 'react';
 
 export function RestaurantMenu() {
   const { language, setLanguage } = useLanguage();
+  const [activeTab, setActiveTab] = useState(menuData[0]?.id);
 
   const restaurantInfo = {
     name: 'Bella Vista',
     tagline: {
-      en: 'Authentic Italian cuisine with a modern twist',
-      km: 'ម្ហូបអ៊ីតាលីពិតប្រាកដជាមួយនឹងការប្រែប្រួលទំនើប'
+      en: 'Khmer food — aromatic, delicious, hygienic, and affordable.',
+      km: 'អាហារខ្មែរ ឈ្ងុយ ឆ្ងាញ់ អនាម័យ និងតម្លៃសមរម្យ'
     },
     address: {
       en: '123 Main Street, Downtown',
@@ -26,9 +28,10 @@ export function RestaurantMenu() {
     },
     hours: {
       en: 'Open Daily 11:00 AM - 10:00 PM',
-      km: 'បើកក្រោយ ពី ម៉ោង ១១ព្រឹក ដល់ ម៉ោង ១០យប់'
+      km: 'បើករាល់ថ្ងៃ ពីម៉ោង ១១ ព្រឹក ដល់ ១០ យប់'
     }
   };
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -100,14 +103,53 @@ export function RestaurantMenu() {
 
       {/* Menu Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
-        <Tabs defaultValue={menuData[0]?.id} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 mb-6 sm:mb-8 h-auto">
-            {menuData.map((category) => (
-              <TabsTrigger key={category.id} value={category.id} className={`text-xs sm:text-sm font-medium language-transition text-fade-in px-2 py-3 ${language === 'km' ? 'font-khmer' : ''}`}>
-                {category.name[language]}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          {/* Mobile Dropdown Menu */}
+          <div className="block sm:hidden mb-6">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="w-full justify-between px-4 py-3 h-auto"
+                >
+                  <span className={`font-medium ${language === 'km' ? 'font-khmer' : ''}`}>
+                    {menuData.find(cat => cat.id === activeTab)?.name[language] || 
+                     (language === 'en' ? 'Select Category' : 'ជ្រើសរើសប្រភេទ')}
+                  </span>
+                  <ChevronDown className="w-5 h-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-[var(--radix-dropdown-menu-trigger-width)]" align="start">
+                {menuData.map((category) => (
+                  <DropdownMenuItem
+                    key={category.id}
+                    onClick={() => setActiveTab(category.id)}
+                    className={`cursor-pointer px-4 py-3 ${language === 'km' ? 'font-khmer' : ''}`}
+                  >
+                    <div className="flex items-center justify-between w-full">
+                      <span>{category.name[language]}</span>
+                      {activeTab === category.id && <Check className="w-4 h-4" />}
+                    </div>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
+          {/* Desktop Horizontal Tabs */}
+          <div className="hidden sm:block">
+            <TabsList className="grid w-full grid-cols-4 mb-6 sm:mb-8 h-auto">
+              {menuData.map((category) => (
+                <TabsTrigger 
+                  key={category.id} 
+                  value={category.id} 
+                  className={`text-xs sm:text-sm font-medium language-transition text-fade-in px-2 py-3 ${language === 'km' ? 'font-khmer' : ''}`}
+                >
+                  {category.name[language]}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
           
           {menuData.map((category) => (
             <TabsContent key={category.id} value={category.id} className="space-y-4 sm:space-y-6">

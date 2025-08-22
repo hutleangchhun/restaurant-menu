@@ -2,150 +2,242 @@ import type { MenuCategory } from '@/types/menu';
 
 export const menuData: MenuCategory[] = [
   {
-    id: 'appetizers',
+    id: 'soup',
     name: {
-      en: 'Appetizers',
-      km: 'ម្ហូបកម្រាំកម្រាំ'
+      en: 'Soup',
+      km: 'ប្រភេទស៊ុប'
     },
     description: {
-      en: 'Perfect starters to begin your culinary journey',
-      km: 'ម្ហូបបម្រើដំបូងដ៏ល្អឥតខ្ចោះសម្រាប់ចាប់ផ្តើមការធ្វើដំណើរធ្វើម្ហូប'
+      en: 'Delicious homemade soup, fresh and flavorful!',
+      km: 'ស៊ុបរសជាតិឆ្ងាញ់ និងស្រស់ស្រាយ។'
     },
     items: [
       {
-        id: 'bruschetta',
+        id: 'rice-noodle-soup',
         name: {
-          en: 'Bruschetta Classica',
-          km: 'ប្រុសកេតាបែបបុរាណ'
+          en: 'Rice Noodle Soup with Pork',
+          km: 'គុយទាវសាច់ជ្រូក'
         },
         description: {
-          en: 'Toasted bread topped with fresh tomatoes, basil, garlic, and olive oil',
-          km: 'នំបុ័ងអាំងកញ្ចប់ផ្លែប៉េងប៉ោះស្រស់ ស្លឹកបាសិល ខ្ទឹមស និងប្រេងអូលីវ'
+          en: 'Rice noodle soup with pork, Innards, and sauce',
+          km: 'ស៊ុបគុយទាវជាមួយសាច់ជ្រូក គ្រឿងក្នុង និងទឹកជ្រលក់'
         },
-        price: 12.99,
-        category: 'appetizers',
+        price: 5000,
+        category: 'soup',
+        options: [
+          {
+            title: {
+              en: 'Add-ons',
+              km: 'បន្ថែម'
+            },
+            choices: [
+              {
+                name: { en: 'Pork Innards', km: 'គ្រឿងក្នុង' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Noodles', km: 'គុយទាវ' },
+                priceAdd: 1000
+              },
+              {
+                name: { en: 'Beef Meatballs', km: 'ប្រហិតសាច់គោ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Seafood', km: 'គ្រឿងសមុទ្រ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Fish Meatball', km: 'ប្រហិតត្រី' },
+                priceAdd: 2000
+              }
+            ]
+          }
+        ],
         labels: [{
-          km: 'បន្លែ',
-          en: 'Vegetarian'
+          km: 'ស៊ុប',
+          en: 'Soup'
         }]
       },
       {
-        id: 'calamari',
+        id: 'rice-noodle-soup-beef',
         name: {
-          en: 'Crispy Calamari',
-          km: 'មឹកខ្ទុយកំប្រុក'
+          en: 'Rice Noodle Soup with Beef',
+          km: 'គុយទាវសាច់គោ'
         },
         description: {
-          en: 'Golden fried squid rings served with marinara sauce and lemon',
-          km: 'មឹកខ្ទុយចៀនពណ៌មាសជាមួយទឹកជ្រលក់ម៉ារីណារ៉ា និងក្រូចឆ្មារ'
+          en: 'Rich beef noodle soup with tender beef and sauce',
+          km: 'ស៊ុបគុយទាវជាមួយសាច់គោ និងទឹកជ្រលក់'
         },
-        price: 15.99,
-        category: 'appetizers'
+        price: 5500,
+        category: 'soup',
+        options: [
+          {
+            title: {
+              en: 'Add-ons',
+              km: 'បន្ថែម'
+            },
+            choices: [
+              {
+                name: { en: 'Pork Innards', km: 'គ្រឿងក្នុង' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Extra Noodles', km: 'គុយទាវបន្ថែម' },
+                priceAdd: 1000
+              },
+              {
+                name: { en: 'Beef Meatballs', km: 'ប្រហិតសាច់គោ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Seafood', km: 'គ្រឿងសមុទ្រ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Fish Meatball', km: 'ប្រហិតត្រី' },
+                priceAdd: 2000
+              }
+            ]
+          }
+        ],
+        labels: [{
+          km: 'ស៊ុប',
+          en: 'Soup'
+        }]
       },
       {
-        id: 'wings',
+        id: 'rice-noodle-soup-meatball',
         name: {
-          en: 'Buffalo Wings',
-          km: 'ស្លាបមាន់ក្រហម'
+          en: 'Rice Noodle Soup with fish Meatball',
+          km: 'គុយទាវប្រហិតត្រី'
         },
         description: {
-          en: 'Spicy chicken wings tossed in buffalo sauce with blue cheese dip',
-          km: 'ស្លាបមាន់ហឹរជាមួយទឹកជ្រលក់ក្រហម និងទឹកជ្រលក់ឈីសខៀវ'
+          en: 'Rich beef noodle soup with tender beef and sauce',
+          km: 'ស៊ុបគុយទាវជាមួយប្រហិតត្រី និងទឹកជ្រលក់'
         },
-        price: 13.99,
-        category: 'appetizers',
+        price: 6000,
+        category: 'soup',
+        options: [
+          {
+            title: {
+              en: 'Add-ons',
+              km: 'បន្ថែម'
+            },
+            choices: [
+              {
+                name: { en: 'Pork Innards', km: 'គ្រឿងក្នុង' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Extra Noodles', km: 'គុយទាវបន្ថែម' },
+                priceAdd: 1000
+              },
+              {
+                name: { en: 'Beef Meatballs', km: 'ប្រហិតសាច់គោ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Seafood', km: 'គ្រឿងសមុទ្រ' },
+                priceAdd: 2000
+              },
+              {
+                name: { en: 'Fish Meatball', km: 'ប្រហិតត្រី' },
+                priceAdd: 2000
+              }
+            ]
+          }
+        ],
         labels: [{
-          km: 'ហឹរ',
-          en: 'Spicy'
+          km: 'ស៊ុប',
+          en: 'Soup'
         }]
-      }
+      },
     ]
   },
   {
-    id: 'mains',
+    id: 'beef-stew',
     name: {
-      en: 'Main Courses',
-      km: 'ម្ហូបសំខាន់'
+      en: 'Beef Stew',
+      km: 'ខគោ'
     },
     description: {
-      en: 'Hearty dishes to satisfy your appetite',
-      km: 'ម្ហូបឆ្ងាញ់ៗសម្រាប់បំពេញចិត្តរបស់អ្នក'
+      en: 'Khmer-style braised beef, rich in flavor and perfect fresh bread or noodle!',
+      km: 'ខគោខ្មែរ មានរសជាតិឆ្ញាញ់ ល្អបំផុតជាមួយនំប៉័ងក្តៅៗ ឬគុយទាវ និងមី!'
     },
     items: [
       {
-        id: 'margherita',
+        id: 'noodle-stew',
         name: {
-          en: 'Pizza Margherita',
-          km: 'ពីហ្សាម៉ាហ្គេរីតា'
+          en: 'Beef Stew with Noodles',
+          km: 'មីខគោ'
         },
         description: {
-          en: 'Classic pizza with tomato sauce, fresh mozzarella, and basil',
-          km: 'ពីហ្សាបែបបុរាណជាមួយទឹកជ្រលក់ប៉េងប៉ោះ ឈីសម៉ុសារ៉ែលឡាស្រស់ និងស្លឹកបាសិល'
+          en: 'Beef Stew with beef, vegetables, and noodles in a savory broth',
+          km: 'ខគោជាមួយសាច់គោ, បន្លែ, មី'
         },
-        price: 18.99,
+        price: 76000,
         category: 'mains',
-        labels: [{
-          km: 'បន្លែ',
-          en: 'Vegetarian'
-        }]
-      },
-      {
-        id: 'salmon',
-        name: {
-          en: 'Grilled Salmon',
-          km: 'ត្រីសាលម៉ុនអាំង'
-        },
-        description: {
-          en: 'Atlantic salmon with lemon herb butter, served with seasonal vegetables',
-          km: 'ត្រីសាលម៉ុនអាត្លង់ទិកជាមួយប៊ើក្រូចឆ្មារ បម្រើជាមួយបន្លែតាមរដូវ'
-        },
-        price: 26.99,
-        category: 'mains',
-        labels: [{
-          km: 'គ្មានជាតិគ្លូតែន',
-          en: 'Gluten-Free'
-        }]
-      },
-      {
-        id: 'ribeye',
-        name: {
-          en: 'Ribeye Steak',
-          km: 'សាច់គោរីបអាយ'
-        },
-        description: {
-          en: '12oz prime ribeye steak with garlic mashed potatoes and asparagus',
-          km: 'សាច់គោរីបអាយ ១២អោនជាមួយដំឡូងចំហុយខ្ទឹមស និងស្ពៃខ្ចី'
-        },
-        price: 32.99,
-        category: 'mains',
-        labels: [{
-          km: 'គ្មានជាតិគ្លូតែន',
-          en: 'Gluten-Free'
+         labels: [{
+          km: 'ខគោ',
+          en: 'Beef Stew'
         }, {
-          km: 'ម្ហូបល្អ',
-          en: 'Premium'
+          km: 'បន្លែ',
+          en: 'Vegetables'
+        },
+        {
+          km: 'មី',
+          en: 'Noodles'
         }]
       },
       {
-        id: 'pasta',
+        id: 'bread-stew',
         name: {
-          en: 'Fettuccine Alfredo',
-          km: 'មីអ៊ីតាលីអាល់ហ្វ្រេដូ'
+          en: 'Beef Stew with Bread',
+          km: 'នំប៉័ងខគោ'
         },
         description: {
-          en: 'Creamy parmesan sauce with fresh fettuccine pasta',
-          km: 'ទឹកជ្រលក់ក្រែមជាមួយមីអ៊ីតាលីស្រស់'
+          en: 'Beef Stew with beef, vegetables, and fresh bread',
+          km: 'ខគោជាមួយសាច់គោ, បន្លែ, នំប៉័ង'
         },
-        price: 19.99,
+        price: 108000,
         category: 'mains',
         labels: [{
-          km: 'បន្លែ',
-          en: 'Vegetarian'
+          km: 'ខគោ',
+          en: 'Beef Stew'
         }, {
-          km: 'ក្រែម',
-          en: 'Creamy'
+          km: 'បន្លែ',
+          en: 'Vegetables'
+        },
+        {
+          km: 'នំប៉័ង',
+          en: 'Bread'
         }]
-      }
+      },
+      {
+        id: 'rice-noodle-stew',
+        name: {
+          en: 'Beef Stew with Rice Noodles',
+          km: 'គុយទាវខគោ'
+        },
+        description: {
+          en: 'Beef Stew with beef, vegetables, and rice noodles in a savory broth',
+          km: 'ខគោជាមួយសាច់គោ, បន្លែ, គុយទាវ'
+        },
+        price: 132000,
+        category: 'mains',
+        labels: [{
+          km: 'ខគោ',
+          en: 'Beef Stew'
+        }, {
+          km: 'បន្លែ',
+          en: 'Vegetables'
+        },
+        {
+          km: 'គុយទាវ',
+          en: 'Rice Noodles'
+        }]
+      },
     ]
   },
   {
@@ -169,13 +261,13 @@ export const menuData: MenuCategory[] = [
           en: 'Steamed rice served with chicken(Wing, Thight, Breast), vegetables, and a sauce',
           km: 'បាយសជាមួយ (ស្លាប, ភ្លៅ, ទ្រូង) បន្លែ និងទឹកជ្រលក់'
         },
-        price: 8.99,
+        price: 36000,
         category: 'desserts',
         labels: [{
           km: 'បាយ',
           en: 'Rice'
         }, {
-          km: 'មាន់',
+          km: 'សាច់មាន់',
           en: 'Chicken'
         }]
       },
@@ -186,17 +278,17 @@ export const menuData: MenuCategory[] = [
           km: "បាយសាច់ជ្រូក"
         },
         description: {
-          "en": "Steamed rice served with pork (grilled), vegetables, and a sauce",
-          "km": "បាយសជាមួយសាច់ជ្រូក (អាំង) បន្លែ និងទឹកជ្រលក់"
+          "en": "Steamed rice served with pork (fried), vegetables, and a sauce",
+          "km": "បាយសជាមួយសាច់ជ្រូក (ចៀន) បន្លែ និងទឹកជ្រលក់"
         },
-        price: 8.99,
+        price: 36000,
         category: "main",
         labels: [{
           km: 'បាយ',
           en: 'Rice'
         }, {
-          km: 'មាន់',
-          en: 'Chicken'
+          km: 'សាច់ជ្រូក',
+          en: 'Pork'
         }]
       },
       {
@@ -209,14 +301,14 @@ export const menuData: MenuCategory[] = [
           en: 'Steamed rice served with beef (fried), vegetables, and a sauce',
           km: 'បាយសជាមួយសាច់គោ (ចៀន) បន្លែ និងទឹកជ្រលក់'
         },
-        price: 7.99,
+        price: 32000,
         category: 'desserts',
         labels: [{
-          km: 'គ្មានជាតិគ្លូតែន',
-          en: 'Gluten-Free'
+          km: 'សាច់គោ',
+          en: 'Beef'
         }, {
-          km: 'តម្លៃសមរម្យ',
-          en: 'Budget-Friendly'
+          km: 'បាយ',
+          en: 'Rice'
         }]
       }
     ]
@@ -242,7 +334,7 @@ export const menuData: MenuCategory[] = [
           en: 'Full-bodied Cabernet Sauvignon from Napa Valley',
           km: 'ស្រាវ៉ាំងខាប៊ែណែត សូវីញ្យុងពីជ្រលងណាប៉ា'
         },
-        price: 9.99,
+        price: 40000,
         category: 'beverages',
         labels: [{
           km: 'មិនមានសាច់',
@@ -256,16 +348,16 @@ export const menuData: MenuCategory[] = [
         }]
       },
       {
-        id: 'coffee',
+        id: 'iced-coffee',
         name: {
-          en: 'Espresso',
-          km: 'កាហ្វេអេស្ព្រេសូ'
+          en: 'Iced Coffee',
+          km: 'កាហ្វេទឹកកក'
         },
         description: {
           en: 'Rich Italian espresso made from premium arabica beans',
           km: 'កាហ្វេអ៊ីតាលីល្អធ្វើពីគ្រាប់កាហ្វេអារ៉ាប៊ីកាល្អ'
         },
-        price: 3.99,
+        price: 16000,
         category: 'beverages',
         labels: [{
           km: 'មិនមានសាច់',
@@ -276,16 +368,16 @@ export const menuData: MenuCategory[] = [
         }]
       },
       {
-        id: 'smoothie',
+        id: 'tee',
         name: {
-          en: 'Berry Smoothie',
-          km: 'ទឹកកក់ផ្លែប៊ឺរី'
+          en: 'Lemon Tea',
+          km: 'តែក្រូចឆ្មារ'
         },
         description: {
           en: 'Blend of mixed berries, banana, and yogurt',
           km: 'ទឹកកក់លាយផ្លែប៊ឺរីច្រើនប្រភេទ ចេក និងយ៉ាឡាត'
         },
-        price: 6.99,
+        price: 28000,
         category: 'beverages',
         labels: [{
           km: 'បន្លែ',

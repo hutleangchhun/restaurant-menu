@@ -15,6 +15,19 @@ export interface MenuItem {
     km: string;
     en: string;
   }[];
+  options?: {
+    title: {
+      en: string;
+      km: string;
+    };
+    choices: {
+      name: {
+        en: string;
+        km: string;
+      };
+      priceAdd: number;
+    }[];
+  }[];
 }
 
 export interface MenuCategory {
